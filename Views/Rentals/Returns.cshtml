@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Vidly.Models.Rental>
+
+@{
+	ViewBag.Title = "Returns";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Returns</h2>
+
+<table id="returns" class="table table-bordered table-hover">
+	<thead>
+		<tr>
+			<th>Customer</th>
+			<th>Movie</th>
+			<th>Date Rented</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var rental in Model)
+		{
+		<tr>
+			<td>@rental.Id</td>
+		</tr>
+
+		}
+	</tbody>
+</table>
